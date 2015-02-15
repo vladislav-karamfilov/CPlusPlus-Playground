@@ -18,10 +18,10 @@
     <ClCompile Include="ElectoralDistrict.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="ElectionSystem.cpp">
+    <ClCompile Include="PoliticalParty.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="PoliticalParty.cpp">
+    <ClCompile Include="ElectoralSystem.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
