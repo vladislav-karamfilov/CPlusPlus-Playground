@@ -1,6 +1,6 @@
 # Register System
 
-#### A simple people register system allowing:
+#### A simple people register system that allows:
 - Adding people to the register
 - Removing people from the register by their SSN
 - Printing on the console all people alphabetically ordered
