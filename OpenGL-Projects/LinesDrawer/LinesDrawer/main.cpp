@@ -12,13 +12,13 @@ const int WINDOW_WIDTH = 700, WINDOW_HEIGHT = 500;
 const int INITIAL_WINDOW_POSITION_X = 100, INITIAL_WINDOW_POSITION_Y = 100;
 const int MOVE_STEP = 3;
 const int MIN_LINE_WIDTH = 1;
+const float ROTATE_ANGLE = 10;
 
 static bool isDrawing;
 static int lineWidth;
 static Color currentColor;
 static LineStyle currentLineStyle;
 static vector<Line> lines;
-static float rotateAngle = 0;
 
 void init() {
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
@@ -121,11 +121,17 @@ void keyPressed(unsigned char key, int x, int y) {
 		break;
 
 	case 'r':
-		glRotatef(rotateAngle - 1, 0, 0, 0.5);
+		glTranslatef(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2, 0);
+		glRotatef(ROTATE_ANGLE, 0, 0, 0.5);
+		glTranslatef(-WINDOW_WIDTH / 2, -WINDOW_HEIGHT / 2, 0);
+
 		break;
 
 	case 'R':
-		glRotatef(rotateAngle + 1, 0, 0, 0.5);
+		glTranslatef(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2, 0);
+		glRotatef(-ROTATE_ANGLE, 0, 0, 0.5);
+		glTranslatef(-WINDOW_WIDTH / 2, -WINDOW_HEIGHT / 2, 0);
+
 		break;
 
 	case 27:
